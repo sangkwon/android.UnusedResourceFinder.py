@@ -1,3 +1,3 @@
 #!/bin/sh
 
-python3 findres.py ~/Documents/workspace/android.daybe
+python3 findres.py ~/Documents/workspace/CoupangAndroid.trunk

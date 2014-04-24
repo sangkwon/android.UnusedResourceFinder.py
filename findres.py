@@ -49,11 +49,13 @@ for drawable in glob.glob(rootPath + "/res/drawable*"):
 
 	for pngPath in glob.glob(drawable+"/*.png"):
 		pngName = os.path.splitext(os.path.basename(pngPath))[0]
-		user = findFirstUser(rootPath,pngName)
+		without9 = pngName.split('.')[0]
+		user = findFirstUser(rootPath,without9)
 		if not user:
 			length = os.path.getsize(pngPath)
 			print(str(length) + "\t" + pngPath)
 			totalLength+=length
+			#os.remove(pngPath);
 
 print("totalLength is "+str(totalLength))
 	
